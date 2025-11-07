@@ -3,7 +3,7 @@ const themeToggle = document.getElementById('themeToggle');
 const themeIcon = themeToggle.querySelector('i');
 
 // Check for saved theme preference or use OS preference
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: light)');
 const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
@@ -42,4 +42,5 @@ window.addEventListener('scroll', function() {
     } else {
         header.style.boxShadow = '0 2px 20px rgba(108, 99, 255, 0.1)';
     }
+
 });
